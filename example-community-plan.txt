@@ -1,0 +1,139 @@
+Here is a valid ThemeSmith plan in text form. The bot can read `.txt` files like this as long as they contain the JSON plan.
+
+```json
+{
+  "planSummary": "A clean public community server with onboarding, announcements, discussion, social sharing, and a private admin area.",
+  "server": {
+    "name": "Creator Community Hub",
+    "description": "A flexible community server for updates, discussion, collaboration, events, and creator sharing.",
+    "keywords": [
+      "community",
+      "creator",
+      "events",
+      "social",
+      "discussion"
+    ]
+  },
+  "roles": [
+    {
+      "name": "Member",
+      "colorHex": "#5865F2",
+      "hoist": true,
+      "mentionable": false,
+      "selfAssignable": false,
+      "permissions": [
+        "ViewChannel",
+        "SendMessages",
+        "ReadMessageHistory",
+        "AddReactions",
+        "AttachFiles",
+        "EmbedLinks",
+        "Connect",
+        "Speak",
+        "UseApplicationCommands"
+      ],
+      "purpose": "Default role for every member in the server."
+    },
+    {
+      "name": "Creator",
+      "colorHex": "#FF6B6B",
+      "hoist": true,
+      "mentionable": true,
+      "selfAssignable": true,
+      "permissions": [
+        "ViewChannel",
+        "SendMessages",
+        "ReadMessageHistory",
+        "AttachFiles",
+        "EmbedLinks",
+        "Connect",
+        "Speak"
+      ],
+      "purpose": "Optional role for members who post videos, streams, art, or updates."
+    },
+    {
+      "name": "Events",
+      "colorHex": "#4ECDC4",
+      "hoist": true,
+      "mentionable": true,
+      "selfAssignable": true,
+      "permissions": [
+        "ViewChannel",
+        "SendMessages",
+        "ReadMessageHistory",
+        "Connect",
+        "Speak"
+      ],
+      "purpose": "Optional role for members who want event and activity pings."
+    },
+    {
+      "name": "Moderator",
+      "colorHex": "#F7B801",
+      "hoist": true,
+      "mentionable": true,
+      "selfAssignable": false,
+      "permissions": [
+        "ViewChannel",
+        "SendMessages",
+        "ReadMessageHistory",
+        "ManageMessages",
+        "MoveMembers",
+        "MuteMembers",
+        "DeafenMembers",
+        "Connect",
+        "Speak"
+      ],
+      "purpose": "Trusted staff role for moderation and private admin coordination."
+    }
+  ],
+  "categories": [
+    {
+      "name": "info",
+      "purpose": "Official info and onboarding channels.",
+      "channels": [
+        {
+          "name": "announcements",
+          "type": "text",
+          "kind": "announcements",
+          "topic": "Official updates and important notices.",
+          "slowmodeSeconds": 0,
+          "purpose": "Main announcement feed.",
+          "overwrites": []
+        },
+        {
+          "name": "rules",
+          "type": "text",
+          "kind": "rules",
+          "topic": "Read the rules before posting.",
+          "slowmodeSeconds": 0,
+          "purpose": "Server rules and behavior expectations.",
+          "overwrites": []
+        },
+        {
+          "name": "welcome",
+          "type": "text",
+          "kind": "welcome",
+          "topic": "Start here and learn how the community works.",
+          "slowmodeSeconds": 0,
+          "purpose": "Welcome and onboarding channel.",
+          "overwrites": []
+        },
+        {
+          "name": "role-selection",
+          "type": "text",
+          "kind": "role-selection",
+          "topic": "Pick optional roles that match your interests.",
+          "slowmodeSeconds": 5,
+          "purpose": "Self-assign role channel.",
+          "overwrites": []
+        }
+      ]
+    }
+  ],
+  "rolloutNotes": [
+    "Set the bot role above community roles so it can edit and assign them.",
+    "Enable Community in Discord if you want official rules-channel and welcome-screen support.",
+    "Use scratch mode for a clean rebuild or existing mode to preserve more of the current layout."
+  ]
+}
+```

@@ -1,0 +1,30 @@
+{
+  "name": "themesmith-discord-bot",
+  "version": "1.0.0",
+  "description": "Public-ready Discord bot for rebuilding servers from AI-generated or manually supplied theme plans.",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "FragSavage",
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "ai",
+    "server-builder",
+    "community",
+    "automation"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.2",
+    "dotenv": "^16.4.5",
+    "openai": "^5.0.0"
+  }
+}
